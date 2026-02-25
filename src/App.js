@@ -3,6 +3,10 @@ import { Block } from './Block';
 import './index.scss';
 
 function App() {
+  const [rates, setRates] = React.useState({});
+
+  React.useEffect ('https://api.apilayer.com/fixer/latest')
+
   return (
     <div className="App">
       <Block value={0} currency="RUB" onChangeCurrency={(cur) => console.log(cur)} />
